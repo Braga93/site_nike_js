@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nike - Entrar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="nike-brand">
+            <a href="index.html" aria-label="Nike - página inicial">
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                width="80" 
+                height="29" 
+                viewBox="135.5 361.38 1000 356.39" 
+                aria-label="Nike" 
+                role="img" 
+                style="fill: #ffffff; display: block;">
+                <path d="M245.8075 717.62406c-29.79588-1.1837-54.1734-9.3368-73.23459-24.4796-3.63775-2.8928-12.30611-11.5663-15.21427-15.2245-7.72958-9.7193-12.98467-19.1785-16.48977-29.6734-10.7857-32.3061-5.23469-74.6989 15.87753-121.2243 18.0765-39.8316 45.96932-79.3366 94.63252-134.0508 7.16836-8.0511 28.51526-31.5969 28.65302-31.5969.051 0-1.11225 2.0153-2.57652 4.4694-12.65304 21.1938-23.47957 46.158-29.37751 67.7703-9.47448 34.6785-8.33163 64.4387 3.34693 87.5151 8.05611 15.898 21.86731 29.6684 37.3979 37.2806 27.18874 13.3214 66.9948 14.4235 115.60699 3.2245 3.34694-.7755 169.19363-44.801 368.55048-97.8366 199.35686-53.0408 362.49439-96.4029 362.51989-96.3672.056.046-463.16259 198.2599-703.62654 301.0914-38.08158 16.2806-48.26521 20.3928-66.16827 26.6785-45.76525 16.0714-86.76008 23.7398-119.89779 22.4235z"/></svg>
+            </a>
+        </div>
+        <nav class="nav-container" 
+        aria-label="Navegação principal">
+            <ul class="menu">
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Kids</a></li>
+                <li><a href="#">Sale</a></li>
+            </ul>
+        </nav>
+        <div class="header-utilities">
+            <a href="index.html" 
+            class="login-link">Voltar à loja</a>
+        </div>
+    </header>
+    <main class="auth-section">
+        <div class="mark-brand">
+            <h1 id="auth-title">WELCOME
+BACK.</h1>
+        </div>
+        <section class="auth-card" aria-labelledby="auth-title">
+            <div class="auth-tabs" id="auth-tabs" role="tablist">
+                <button type="button" class="auth-tab is-active" 
+                role="tab" 
+                aria-selected="true" 
+                aria-controls="login-form" 
+                data-tab="login">Entrar</button>
+                <button type="button" 
+                class="auth-tab" 
+                role="tab" 
+                aria-selected="false" 
+                aria-controls="register-form" 
+                data-tab="register">Criar conta</button>
+            </div>
+            <form class="auth-form" 
+            id="login-form" 
+            data-form="login" 
+            novalidate>
+                <div class="field">
+                    <label>
+                        E-mail
+                        <input type="email" 
+                        id="login-email" 
+                        name="email" 
+                        autocomplete="email" 
+                        data-rule="email">
+                    </label>
+                    <p class="field-error" 
+                    id="login-email-error"></p>
+                </div>
+                <div class="field">
+                    <label for="login-password">Senha</label>
+                    <div class="password-wrap">
+                        <input type="password" 
+                        id="login-password" 
+                        name="password" 
+                        autocomplete="current-password" 
+                        data-rule="password">
+                        <button type="button" 
+                        class="toggle-password" 
+                        data-target="login-password" 
+                        aria-pressed="false">Mostrar</button>
+                    </div>
+                    <p class="field-error" 
+                    id="login-password-error"></p>
+                </div>
+                <p class="form-message" 
+                role="status"></p>
+                <button type="submit" 
+                class="btn-primary">Entrar</button>
+            </form>
+            <form class="auth-form" 
+            id="register-form" 
+            data-form="register" novalidate hidden>
+                <div class="field">
+                    <label>
+                        Nome
+                        <input type="text" id="register-name" 
+                        name="name" 
+                        autocomplete="name" 
+                        data-rule="name">
+                    </label>
+                    <p class="field-error" id="register-name-error"></p>
+                </div>
+                <div class="field">
+                    <label>
+                        E-mail
+                        <input type="email" 
+                        id="register-email" 
+                        name="email" 
+                        autocomplete="email" 
+                        data-rule="email">
+                    </label>
+                    <p class="field-error" id="register-email-error"></p>
+                </div>
+                <div class="field">
+                    <label for="register-password">Senha</label>
+                    <div class="password-wrap">
+                        <input type="password" 
+                        id="register-password" 
+                        name="password" 
+                        autocomplete="new-password" 
+                        data-rule="newPassword">
+                        <button type="button" 
+                        class="toggle-password" 
+                        data-target="register-password" 
+                        aria-pressed="false">Mostrar</button>
+                    </div>
+                    <p class="field-error" id="register-password-error"></p>
+                </div>
+                <div class="field">
+                    <label>
+                        Confirmar senha
+                        <input type="password" 
+                        id="register-confirm" 
+                        name="confirm" 
+                        autocomplete="new-password" 
+                        data-rule="confirm">
+                    </label>
+                    <p class="field-error" id="register-confirm-error"></p>
+                </div>
+                <p class="form-message" role="status"></p>
+                <button type="submit" class="btn-primary">Criar conta</button>
+            </form>
+            <div class="welcome" id="welcome" hidden>
+                <h2 id="welcome-name"></h2>
+                <p>Você entrou na sua conta.</p>
+                <a href="index.html" 
+                class="btn-primary">Ir para a loja</a>
+                <button type="button" 
+                class="btn-secondary" 
+                id="logout">Sair</button>
+            </div>
+        </section>
+    </main>
+    <script src="login.js"></script>
+</body>
+</html>

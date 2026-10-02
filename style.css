@@ -1,0 +1,289 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+ul {
+    list-style: none;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+:root {
+    --bg-spot: #3a3a3a;
+    --bg-mid: #141414;
+    --bg-dark: #050505;
+    --bg-black: #000000;
+    --text-primary: #ffffff;
+    --text-secondary: rgba(255, 255, 255, 0.6);
+    --text-tertiary: rgba(255, 255, 255, 0.4);
+    --surface: rgba(255, 255, 255, 0.03);
+    --surface-hover: rgba(255, 255, 255, 0.08);
+    --border-subtle: rgba(255, 255, 255, 0.08);
+    --radius-pill: 999px;
+    --radius-lg: 22px;
+    --section-padding-x: clamp(20px, 5vw, 50px);
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    color: var(--text-primary);
+    background: radial-gradient(
+        circle at 20% 20%,
+        var(--bg-spot) 0%,
+        var(--bg-mid) 45%,
+        var(--bg-dark) 80%,
+        var(--bg-black) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+    padding: 24px var(--section-padding-x);
+}
+a:focus-visible {
+    outline: 2px solid var(--text-primary);
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+.main-header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--border-subtle);
+}
+.nike-brand { 
+    justify-self: start;  
+}
+.nav-container { 
+    justify-self: center; 
+}
+.header-utilities { justify-self: 
+    end; display: 
+    flex; align-items: 
+    center; gap: 
+    22px; 
+}
+.nav-container .menu {
+    display: flex;
+    flex-direction: row;
+    gap: 36px;
+}
+.nav-container .menu a {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    color: var(--text-secondary);
+    transition: color 0.2s ease;
+}
+.nav-container .menu a:hover {
+    color: var(--text-primary);
+}
+.search-bar-placeholder {
+    background: var(--surface-hover);
+    border: 1px solid var(--border-subtle);
+    color: var(--text-tertiary);
+    padding: 9px 20px;
+    border-radius: var(--radius-pill);
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 200px;
+}
+.icon-search {
+    color: var(--text-tertiary);
+    flex-shrink: 0;
+}
+.login-link {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-secondary);
+    transition: color 0.2s ease;
+}
+
+.login-link:hover {
+    color: var(--text-primary);
+}
+.cart-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: background 0.2s ease;
+}
+.cart-link:hover {
+    background: var(--surface-hover);
+}
+.main-section {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1;
+    padding: 40px 0;
+    gap: 0;
+}
+.mark-brand {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 10px;
+}
+.mark-brand h1 {
+    font-size: clamp(56px, 8vw, 120px);
+    font-weight: 900;
+    line-height: 0.88;
+    letter-spacing: -3px;
+    text-transform: uppercase;
+}
+.product-showcase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 460px;
+    position: relative;
+}
+.shoe-stage {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 520px;
+}
+.rotation-ring {
+    width: 82%;
+    height: 32px;
+    margin-top: 42px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.20);
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-top: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    pointer-events: none;
+}
+.rotation-arrows {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: rgba(255, 255, 255, 0.45);
+    background: #0b0b0b;
+    padding: 1px 10px;
+    transform: translateY(7px);
+    border-radius: 4px;
+}
+.product-display {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.container-img {
+    width: 100%;
+    aspect-ratio: 640 / 280;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transform: rotate(-12deg);
+    filter: drop-shadow(0px 30px 40px rgba(0, 0, 0, 0.9));
+    color: var(--text-tertiary);
+    font-size: 13px;
+    text-align: center;
+}
+.shoe-details {
+    text-align: left;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 10px;
+}
+.shoe-details h2 {
+    font-size: 22px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    line-height: 1.15;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+.shoe-details .price {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+.footer-cards {
+    margin-top: auto;
+    border-top: 1px solid var(--border-subtle);
+    padding-top: 22px;
+}
+.container-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+.card {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    background: var(--surface);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    padding: 14px 16px;
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(10px);
+}
+.card-thumb {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 14px;
+    background: var(--thumb-tint, #1c1c1c);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.card-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 8px;
+}
+.card-info h3 {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    margin-bottom: 2px;
+}
+.card-price {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+.rating {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #ffd66b;
+}
+.star-empty {
+    color: rgba(255, 255, 255, 0.25);
+}

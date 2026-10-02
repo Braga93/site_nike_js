@@ -1,0 +1,194 @@
+:root {
+    --error: #ff7a7a;
+    --success: #7be0a0;
+}
+[hidden] {
+    display: none !important;
+}
+.main-header .nike-brand a {
+    display: block;
+}
+.auth-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+    flex-grow: 1;
+    padding: 40px 0;
+}
+#auth-title {
+    white-space: pre-line;
+}
+.auth-card {
+    justify-self: center;
+    width: 100%;
+    max-width: 440px;
+    padding: 32px;
+    background: var(--surface);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    backdrop-filter: blur(10px);
+}
+.auth-tabs {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid var(--border-subtle);
+}
+.auth-tab {
+    padding: 0 0 12px;
+    margin-bottom: -1px;
+    background: none;
+    border: none;
+    border-bottom: 2px solid transparent;
+    color: var(--text-tertiary);
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+.auth-tab:hover {
+    color: var(--text-secondary);
+}
+.auth-tab.is-active {
+    color: var(--text-primary);
+    border-bottom-color: var(--text-primary);
+}
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.field label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+.field label:has(input) {
+    margin-bottom: 0;
+}
+.field label input {
+    margin-top: 8px;
+}
+.field input {
+    width: 100%;
+    padding: 14px 20px;
+    background: var(--surface-hover);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-pill);
+    color: var(--text-primary);
+    font-size: 15px;
+    transition: border-color 0.2s ease;
+}
+.field input:focus {
+    outline: none;
+    border-color: var(--text-secondary);
+}
+.field input.invalid {
+    border-color: var(--error);
+}
+.password-wrap {
+    position: relative;
+}
+.password-wrap input {
+    padding-right: 96px;
+}
+.toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+}
+.toggle-password:hover {
+    color: var(--text-primary);
+}
+.field-error {
+    min-height: 16px;
+    margin-top: 6px;
+    padding-left: 20px;
+    font-size: 12px;
+    color: var(--error);
+}
+.form-message {
+    font-size: 13px;
+    font-weight: 700;
+}
+.form-message:empty {
+    display: none;
+}
+.form-message[data-type="error"] {
+    color: var(--error);
+}
+.form-message[data-type="success"] {
+    color: var(--success);
+}
+.btn-primary,
+.btn-secondary {
+    display: block;
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: var(--radius-pill);
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+    transition: opacity 0.2s ease, background 0.2s ease;
+}
+.btn-primary {
+    background: var(--text-primary);
+    border: 1px solid var(--text-primary);
+    color: var(--bg-black);
+}
+.btn-primary:hover {
+    opacity: 0.85;
+}
+.btn-secondary {
+    background: none;
+    border: 1px solid var(--border-subtle);
+    color: var(--text-primary);
+}
+.btn-secondary:hover {
+    background: var(--surface-hover);
+}
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible,
+.auth-tab:focus-visible,
+.toggle-password:focus-visible {
+    outline: 2px solid var(--text-primary);
+    outline-offset: 3px;
+}
+.welcome {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.welcome h2 {
+    font-size: 26px;
+    font-weight: 900;
+}
+.welcome p {
+    margin-bottom: 8px;
+    color: var(--text-secondary);
+}
+@media (max-width: 800px) {
+    .main-header {
+        grid-template-columns: 1fr auto;
+    }
+
+    .nav-container {
+        display: none;
+    }
+
+    .auth-section {
+        grid-template-columns: 1fr;
+    }
+}
